@@ -18,24 +18,10 @@ zoom xon;
 
 % d 
 
-step1 = 0.0000005;
-step2 = 0.002;
-step3 = 0.0025;
-step4 = 0.004;
+step = [0.000005 0.002 0.0025 0.004];
 
-t1 = (0:step1:stop);  
-t2 = (0:step2:stop);  
-t3 = (0:step3:stop);  
-t4 = (0:step4:stop);  
-
-% Create plots
-figure;
-t = tiledlayout(2,2);
-nexttile
-plot(t1,x)
-nexttile
-plot(t2,x)
-nexttile
-plot(t3,x)
-nexttile
-plot(t4,x)
+for i = 1:size(step, 1)
+    test = (0:step(i):stop);
+    figure;
+    plot(test,x);
+end
