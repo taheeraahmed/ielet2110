@@ -9,10 +9,10 @@ x = 5*sin(2*pi*f*t);
 figure;
 plot(t,x);
 set(gca,'xtick', 0:0.0001:stop)
-title('Task 2b: Signal versus Time');
+title('Task 2b: Signal vs. Time');
 zoom xon;
 
-%c 
+% c 
 Ax = gca;
 xt = Ax.XTick;
 Ax.XTickLabel = xt/1000;
