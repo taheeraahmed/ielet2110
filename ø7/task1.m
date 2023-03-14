@@ -10,7 +10,6 @@ title('Frequency Response');
 grid on;
 
 figure(2);
-subplot(2,1,1); % create a subplot for magnitude response
 plot(w, abs(H));
 xlabel('Frequency (\omega/\pi)');
 ylabel('Magnitude');
@@ -19,8 +18,7 @@ set(gca,'XScale','log')
 set(gca,'YScale','log')
 grid on;
 
-
-subplot(2,1,2); % create a subplot for phase response
+figure(3);
 plot(w, angle(H));
 xlabel('Frequency (\omega/\pi)');
 ylabel('Phase (rad)');
